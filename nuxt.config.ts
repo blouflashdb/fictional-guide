@@ -6,8 +6,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
+    '@element-plus/nuxt',
+    '@nuxtjs/i18n',
   ],
 
   experimental: {
@@ -21,10 +22,6 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
   ],
-
-  colorMode: {
-    classSuffix: '',
-  },
 
   nitro: {
     esbuild: {
@@ -59,5 +56,15 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
+  },
+
+  i18n: {
+    langDir: 'locales',
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
+      { code: 'de', iso: 'de-DE', file: 'de.json', dir: 'ltr' },
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix',
   },
 })
