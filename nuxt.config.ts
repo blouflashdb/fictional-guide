@@ -59,6 +59,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: 'http://localhost:3000',
     langDir: 'locales',
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
@@ -66,5 +67,11 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     strategy: 'prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+      alwaysRedirect: true,
+    },
   },
 })

@@ -1,5 +1,7 @@
 {
   "hello": "Hallo, {name}!",
   "language": "Sprache",
-  "welcome": "Willkommen"
+  "welcome": "Willkommen",
+  "pages.title.top": "Index GER",
+  "layouts.title": "Coole Seite {title}"
 }
